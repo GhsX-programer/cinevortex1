@@ -1,7 +1,8 @@
+const Dotenv = require('dotenv').config();
 const express = require('express');
 const Sequelize = require('sequelize')
 const app = express();
-const port = 3000
+const port = process.env.PORT || 3000;
 const bodyparser = require('body-parser');
 const Bcrypt = require('bcrypt')
 const connection = require('./database/conection');
