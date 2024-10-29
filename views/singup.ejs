@@ -1,0 +1,30 @@
+<%- include('partials/head.ejs') %>
+
+<body>
+    <div class="principal">
+       <div class="container">
+        <div class="text-center">
+            <h1>Cadastre-se</h1>
+        </div>
+        <div class="form">
+            <div class="form-config">
+                <form action="/cadastro-user" method="post">
+                    <label for="E-mail">
+                    <div><input type="email" class="btn btn-dark" name="email" id="" placeholder="E-mail"></div><br>
+                    <div><input type="email" class="btn btn-dark" name="email2" id="" placeholder="Confirme o E-mail"></div></label>
+                    <label for="Senha">
+                    <div><input type="password" class="btn btn-dark" name="senha" id="" placeholder="Senha"></div><br>
+                    <div><input type="password" class="btn btn-dark" name="senha2" id="" placeholder="Confirme a Senha"></div></label>                    
+                    <br>
+                    <div><input type="submit" class="btn btn-success efeito efeitoCont" nome="" id="" value="Criar Conta"></div>
+                    <br>
+                    <p><a href="/login">Ja tenho uma conta!</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+<%- include('partials/footer.ejs') %>
