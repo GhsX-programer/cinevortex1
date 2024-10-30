@@ -12,6 +12,10 @@ body{
     }  
 }
 
+.categoria{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.705);
+}
 
 .form{
     width: 19%;
