@@ -1,11 +1,20 @@
 body{
     background-color: rgb(245, 240, 240);
     h1{
+        font-size: 75px;
+        text-align: center;
+        font-weight: bold;
+        font-style: inherit;
         color: #23b68a;
     }
     h2{
         color: black;
-    }
+    }  
+}
+
+.categoria{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.705);
 }
 
 .form{
@@ -31,11 +40,19 @@ body{
     
 }
 
+.efeitoCont:hover {
+    transform: scale(1.1); /* Aumenta levemente o tamanho */
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.2), /* Sombra mais suave */
+        0 5px 15px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
+}
+
 
 @media screen and (max-width: 768px) {
 
+
     .card{
-        width: 30%;
+        width: 90%;
     }
 }
 
