@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 const app = express();
 const port = process.env.PORT || 3000;
 const bodyparser = require('body-parser');
-const Bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs');
 const connection = require('./database/conection');
 //const cadastrouser = require('./database/cadastro_usuario').default
 //const Usuario = require('./database/cadastro_usuario')//.default
@@ -69,8 +69,8 @@ app.post('/cadastro-user' , (req , res)=>{
     var email = req.body.email
     var senha = req.body.senha
 
-    var salt = Bcrypt.genSaltSync(10)
-    var hash = Bcrypt.hashSync(senha , salt)
+    var salt = bcrypt.genSaltSync(10)
+    var hash = bcrypt.hashSync(senha , salt)
 
         usuario.create({
             email: email,
@@ -92,7 +92,7 @@ app.post('/logado', (req , res)=>{
 
     usuario.findOne({where:{email:email}}).then(usuario =>{
         if(usuario!=undefined){
-            var correct = Bcrypt.compareSync(senha, usuario.senha)
+            var correct = bcrypt.compareSync(senha, usuario.senha)
             if(correct){
                 res.redirect("/home")
             }else{
