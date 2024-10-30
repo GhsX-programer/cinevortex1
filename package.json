@@ -14,7 +14,7 @@
   "description": "Filmes e Series",
   "main": "index.js",
   "scripts": {
-    "start": "index.js"
+    "start": "node index.js"
   },
   "author": "GhsX",
   "license": "ISC"
